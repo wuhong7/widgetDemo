@@ -8,7 +8,7 @@
 
 import UIKit
 
-let defaultTimeInterval: TimeInterval = 10
+let defaultTimeInterval: TimeInterval = 25*60
 let taskDidFinishedInWidgetNotification: String = "com.onevcat.simpleTimer.TaskDidFinishedInWidgetNotification"
 
 class ViewController: UIViewController {

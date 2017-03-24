@@ -103,7 +103,7 @@ class WHTimer: NSObject {
     }
     
     
-    dynamic private func countTick() {
+    @objc private func countTick() {
         leftTime = leftTime - 1
         if let tickHandler = timerTickHandler {
             tickHandler(leftTime)
