@@ -27,6 +27,9 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnStopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Oo-y5-bjU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oar-EZ-3oD">
                                 <rect key="frame" x="163" y="235" width="47" height="39"/>
