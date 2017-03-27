@@ -8,7 +8,7 @@
 
 import UIKit
 
-let defaultTimeInterval: TimeInterval = 25*60
+let defaultTimeInterval: TimeInterval = 25
 let taskDidFinishedInWidgetNotification: String = "com.onevcat.simpleTimer.TaskDidFinishedInWidgetNotification"
 
 class ViewController: UIViewController {
@@ -105,16 +105,21 @@ extension ViewController{
     }
     
     private func saveDefaults() {
-        if let userDefault = UserDefaults(suiteName: "group.simpleTimerSharedDefaults") {
+        if let userDefault = UserDefaults(suiteName: "group.WHTimerDemo") {
             userDefault.set(Int(timer.leftTime), forKey: keyLeftTime)
             userDefault.set(Int(NSDate().timeIntervalSince1970), forKey: keyQuitDate)
+            
+            let leftTimeWhenQuit = userDefault.integer(forKey: "com.onevcat.simpleTimer.lefttime")
+            let quitDate = userDefault.integer(forKey: "com.onevcat.simpleTimer.quitdate")
+            
+            print("\(leftTimeWhenQuit)----\(quitDate)")
             
             userDefault.synchronize()
         }
     }
     
     private func clearDefaults() {
-        if let userDefault = UserDefaults(suiteName: "group.simpleTimerSharedDefaults") {
+        if let userDefault = UserDefaults(suiteName: "group.WHTimerDemo") {
             userDefault.removeObject(forKey: keyLeftTime)
             userDefault.removeObject(forKey: keyQuitDate)
             

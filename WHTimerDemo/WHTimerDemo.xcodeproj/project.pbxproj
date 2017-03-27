@@ -57,6 +57,8 @@
 		E64B7FA81E88B139007760EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		E64B7FAB1E88B139007760EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E64B7FAD1E88B139007760EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E64B7FB51E88B5F9007760EA /* WHTimerDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WHTimerDemo.entitlements; sourceTree = "<group>"; };
+		E64B7FB61E88B62D007760EA /* WUTimerDemoExtenstion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WUTimerDemoExtenstion.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		E64067091E84F38D00E26D75 /* WHTimerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E64B7FB51E88B5F9007760EA /* WHTimerDemo.entitlements */,
 				E640670A1E84F38D00E26D75 /* AppDelegate.swift */,
 				E640670C1E84F38D00E26D75 /* ViewController.swift */,
 				E640671C1E84FC5F00E26D75 /* WHTimer.swift */,
@@ -122,6 +125,7 @@
 		E64B7FA71E88B139007760EA /* WUTimerDemoExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				E64B7FB61E88B62D007760EA /* WUTimerDemoExtenstion.entitlements */,
 				E64B7FA81E88B139007760EA /* TodayViewController.swift */,
 				E64B7FAA1E88B139007760EA /* MainInterface.storyboard */,
 				E64B7FAD1E88B139007760EA /* Info.plist */,
@@ -182,11 +186,21 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N3S97NLHPV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E64B7FA21E88B139007760EA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N3S97NLHPV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -385,6 +399,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WHTimerDemo/WHTimerDemo.entitlements;
 				DEVELOPMENT_TEAM = N3S97NLHPV;
 				INFOPLIST_FILE = WHTimerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -400,6 +415,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WHTimerDemo/WHTimerDemo.entitlements;
 				DEVELOPMENT_TEAM = N3S97NLHPV;
 				INFOPLIST_FILE = WHTimerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -413,6 +429,7 @@
 		E64B7FB11E88B139007760EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WUTimerDemoExtenstion/WUTimerDemoExtenstion.entitlements;
 				DEVELOPMENT_TEAM = N3S97NLHPV;
 				INFOPLIST_FILE = WUTimerDemoExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -427,6 +444,7 @@
 		E64B7FB21E88B139007760EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WUTimerDemoExtenstion/WUTimerDemoExtenstion.entitlements;
 				DEVELOPMENT_TEAM = N3S97NLHPV;
 				INFOPLIST_FILE = WUTimerDemoExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -466,6 +484,7 @@
 				E64B7FB21E88B139007760EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

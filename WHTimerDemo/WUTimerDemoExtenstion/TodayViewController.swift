@@ -11,9 +11,21 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var lblTimer: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+
+        let userDefaults = UserDefaults(suiteName: "group.WHTimerDemo")
+        let leftTimeWhenQuit = userDefaults?.integer(forKey: "com.onevcat.simpleTimer.lefttime")
+        let quitDate = userDefaults?.integer(forKey: "com.onevcat.simpleTimer.quitdate")
+        
+        let passedTimeFromQuit = NSDate().timeIntervalSince(NSDate(timeIntervalSince1970: TimeInterval(quitDate!)) as Date)
+        
+        let leftTime = leftTimeWhenQuit! - Int(passedTimeFromQuit)
+        
+        lblTimer.text = "\(leftTime)"
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
