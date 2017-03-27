@@ -40,7 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.scheme == "simpleTimer" {
+            if url.host == "finished" {
+                NotificationCenter.default
+                    .post(name: Notification.Name(rawValue: taskDidFinishedInWidgetNotification), object: nil)
+            }
+            return true
+        }
+        
+        return false
+    }
 
 }
 

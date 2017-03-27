@@ -37,7 +37,7 @@ extension TimeInterval {
         }
     }
 }
-class WHTimer: NSObject {
+public class WHTimer: NSObject {
     
     public var running: Bool = false
     

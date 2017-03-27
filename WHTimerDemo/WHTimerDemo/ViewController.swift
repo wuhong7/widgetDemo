@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleTimerKit
 
 let defaultTimeInterval: TimeInterval = 25
 let taskDidFinishedInWidgetNotification: String = "com.onevcat.simpleTimer.TaskDidFinishedInWidgetNotification"
